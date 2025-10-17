@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Resume Maker</title>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: #f4f6f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    form {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        width: 400px;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    input, textarea {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+    button {
+        background: #007BFF;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+    }
+    button:hover {
+        background: #0056b3;
+    }
+</style>
+</head>
+<body>
+    <form action="/generate" method="POST">
+        <h2>Resume Maker</h2>
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="phone" placeholder="Phone Number" required>
+        <textarea name="education" placeholder="Education Details" rows="3" required></textarea>
+        <textarea name="skills" placeholder="Skills" rows="3" required></textarea>
+        <textarea name="experience" placeholder="Work Experience" rows="4" required></textarea>
+        <button type="submit">Generate Resume</button>
+    </form>
+</body>
+</html>
